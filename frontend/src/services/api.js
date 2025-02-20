@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const API = axios.create({
-  baseURL: process.env.BACKEND_URL,
+  baseURL: "http://localhost:5000/api",
 });
 
 export const getFlashcards = () => API.get("/flashcards");
