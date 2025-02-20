@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { getFlashcards, updateFlashcard, deleteFlashcard } from "../services/api";
 import Flashcard from "./Flashcard";
 
-const FlashcardList = () => {
+const FlashcardList = ({ darkMode }) => {
   const [flashcards, setFlashcards] = useState([]);
 
   useEffect(() => {
@@ -33,6 +33,7 @@ const FlashcardList = () => {
             card={card}
             onUpdate={handleUpdate}
             onDelete={handleDelete}
+            darkMode={darkMode}
           />
         ))
       ) : (
